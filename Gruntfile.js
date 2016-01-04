@@ -73,6 +73,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build', ['concat', 'uglify']);
   grunt.registerTask('test', ['karma:continuous']);
   grunt.registerTask('watch', ['karma:watch']);
+  grunt.loadNpmTasks('grunt-serve');
 
   grunt.registerTask('release', function(type) {
     type = type ? type : 'patch';
